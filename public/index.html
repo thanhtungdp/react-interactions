@@ -2,11 +2,50 @@
 <html>
 <head>
     <title>First React Component</title>
+    <style type="text/css">
+        input{
+            padding: 5px;
+            width: 120px;
+            margin-top: 10px;
+        }
+        .item{
+            background-color: #efefef;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 1px;
+            padding: 8px 12px;
+            width: 120px;
+        }
+        .example-enter, .example-appear{
+            opacity: 0;
+            transform: translateX(-250px);
+        }
+        .example-enter.example-enter-active, .example-appear.example-appear-active{
+            opacity: 1;
+            transform: translateX(0);
+            transition: .3s;
+        }
+        .example-appear-active:nth-child(1){
+            transition: .1s;
+        }
+        .example-appear-active:nth-child(2){
+            transition: .2s;
+        }
+        .example-leave{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .example-leave.example-leave-active{
+            opacity: 0;
+            transform: translateX(250px);
+            transition: .3s;
+        }
+    </style>
 </head>
 <body>
-    <div id="root">
+<div id="root">
 
-    </div>
-    <script type="text/javascript" src="bundle.js"></script>
+</div>
+<script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

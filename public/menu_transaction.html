@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>First React Component</title>
+    <style media="screen">
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        li{
+            padding: 15px;
+            border-bottom: solid 1px #eee;
+            background-color: #ddd;
+        }
+        .sidebar{
+            background-color: #eee;
+            box-shadow: 1px 0 3px #888888;
+            position: absolute;
+            width: 15rem;
+            height: 100%;
+        }
+        .sidebar-transation{
+            opacity: 0;left: -15rem;
+        }
+        .sidebar-transation-active{
+            opacity: 1;
+            left:0;
+            transition: .5s
+        }
+    </style>
+</head>
+<body>
+<header>
+    <button onclick="
+        document.querySelector('.sidebar').classList.add('sidebar-transation-active');
+    ">&#9776;</button>
+</header>
+<div class="sidebar sidebar-transation">
+    <ul>
+        <li><a href="#">Menu 1</a> </li>
+        <li><a href="#">Menu 2</a> </li>
+        <li><a href="#">Menu 3</a> </li>
+    </ul>
+</div>
+<div id="root">
+
+</div>
+<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
