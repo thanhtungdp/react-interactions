@@ -8,10 +8,11 @@ var config = {
     },
     module: {
         loaders: [{
+            exclude: /(node_modules|bower_components)/,
             test: /\.jsx?$/,
             loader: 'babel',
             query: {
-                presets: ['es2015', 'react']
+                presets: ['es2015', 'stage-0', 'react']
             }
         }]
     },
